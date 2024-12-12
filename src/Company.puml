@@ -1,0 +1,42 @@
+Транспортное средство (базовый класс)
+Поля:
+мощность: int
+стоимость: float
+номер: String
+марка: String
+Методы:
+getInfo(): String
+Автомобиль (наследник)
+Поля:
+пробег: int
+пройден_техосмотр: boolean
+Методы:
+isTechInspectionPassed(): boolean
+Самолет (наследник)
+Поля:
+максимальная_высота_полёта: int
+Методы:
+getFlightDetails(): String
+@startuml
+class Транспортное_средство {
+    - мощность: int
+    - стоимость: float
+    - номер: String
+    - марка: String
+    + getInfo(): String
+}
+
+class Автомобиль {
+    - пробег: int
+    - пройден_техосмотр: boolean
+    + isTechInspectionPassed(): boolean
+}
+
+class Самолет {
+    - максимальная_высота_полёта: int
+    + getFlightDetails(): String
+}
+
+Транспортное_средство <|-- Автомобиль
+Транспортное_средство <|-- Самолет
+@enduml

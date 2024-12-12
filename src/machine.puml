@@ -1,0 +1,32 @@
+@startuml
+class Автомобиль {
+    -марка: "Toyota"
+    -модель: "Camry"
+    -год_выпуска: 2020
+    -цвет: "Черный"
+    -пробег: 15000
+    +start()
+    +stop()
+    +drive(distance: int)
+    +getInfo(): String
+}
+
+class Компания {
+    -название: "TechCorp"
+    -адрес: "г. Москва, ул. Программная, д. 1"
+    -сотрудники: ["Иванов", "Петров"]
+    +addEmployee(name: String)
+    +removeEmployee(name: String)
+    +getInfo(): String
+}
+
+class Редакция_Газеты {
+    -название: "Новости Сегодня"
+    -адрес: "г. Санкт-Петербург, ул. Новосильская, д. 2"
+    -редакторы: ["Сидоров", "Кузнецов"]
+    -издательства: ["Издательство 1", "Издательство 2"]
+    +addEditor(name: String)
+    +removeEditor(name: String)
+    +getInfo(): String
+}
+@enduml

@@ -1,0 +1,66 @@
+//a) Класс "Автомобиль"
+  Поля:
+  марка: String
+  модель: String
+  год выпуска: int
+  цвет: String
+  пробег: int
+  Методы:
+  start()
+  stop()
+  drive(distance: int)
+  getInfo(): String
+  б) Класс "Компания"
+  Поля:
+  название: String
+  адрес: String
+  сотрудники: List
+  Методы:
+  addEmployee(name: String)
+  removeEmployee(name: String)
+  getInfo(): String
+  в) Класс "Редакция Газеты"
+  Поля:
+  название: String
+  адрес: String
+  редакторы: List
+  издательства: List
+  Методы:
+  addEditor(name: String)
+  removeEditor(name: String)
+  getInfo(): String
+
+
+
+@startuml
+class Автомобиль {
+    -марка: String
+    -модель: String
+    -год_выпуска: int
+    -цвет: String
+    -пробег: int
+    +start()
+    +stop()
+    +drive(distance: int)
+    +getInfo(): String
+}
+
+class Компания {
+    -название: String
+    -адрес: String
+    -сотрудники: List<String>
+    +addEmployee(name: String)
+    +removeEmployee(name: String)
+    +getInfo(): String
+}
+
+class Редакция_Газеты {
+    -название: String
+    -адрес: String
+    -редакторы: List<String>
+    -издательства: List<String>
+    +addEditor(name: String)
+    +removeEditor(name: String)
+    +getInfo(): String
+}
+@enduml
